@@ -1,0 +1,45 @@
+.sort {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 40px;
+
+	button {
+		display: grid;
+
+		align-items: center;
+
+		cursor: pointer;
+
+		border: none;
+		background: none;
+
+		font-size: 16px;
+		line-height: 22px;
+		gap: 8px;
+		grid-template-columns: 20px 1fr;
+	}
+
+	button:not(.active) {
+		grid-template-columns: 1fr;
+	}
+
+	.sortIcon {
+		display: none;
+
+		rect {
+			fill: var(--primary);
+		}
+	}
+
+	.active {
+		color: var(--primary);
+
+		font-weight: bold;
+	}
+
+	.active .sortIcon {
+		display: block;
+
+		margin-right: 8px;
+	}
+}
